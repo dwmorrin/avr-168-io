@@ -20,26 +20,26 @@ uint8_t keypad_read_code()
     return PIND & 0x0F;
 }
 
-uint8_t keypad_read()
+char keypad_read_char()
 {
     switch(keypad_read_code())
     {
-        case 0: return 1;
-        case 1: return 2;
-        case 2: return 3;
-        case 3: return 65;
-        case 4: return 4;
-        case 5: return 5;
-        case 6: return 6;
-        case 7: return 66;
-        case 8: return 7;
-        case 9: return 8;
-        case 10: return 9;
-        case 11: return 67;
-        case 12: return 42;
-        case 13: return 0;
-        case 14: return 35;
-        case 15: return 68;
+        case 0: return '1';
+        case 1: return '2';
+        case 2: return '3';
+        case 3: return 'A';
+        case 4: return '4';
+        case 5: return '5';
+        case 6: return '6';
+        case 7: return 'B';
+        case 8: return '7';
+        case 9: return '8';
+        case 10: return '9';
+        case 11: return 'C';
+        case 12: return '*';
+        case 13: return '0';
+        case 14: return '#';
+        case 15: return 'D';
         default: return KEYPAD_ERROR;
     }
 }

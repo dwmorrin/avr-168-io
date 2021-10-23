@@ -11,7 +11,7 @@
 
 void keypad_init();
 uint8_t keypad_input_ready();
-uint8_t keypad_read();
+char keypad_read_char();
 uint8_t keypad_read_code();
 
 #endif
